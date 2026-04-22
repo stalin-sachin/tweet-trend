@@ -16,6 +16,13 @@ pipeline {
             }
         }
 
+        stage( 'Test') {
+            steps {
+                echo "------------- Unit test Started ---------------------"
+                sh 'mvn sunfire-report:report'
+                 echo "----------------- Unit test Completed --------------"
+            }
+        }
         stage('SonarQube Analysis') {
             environment {
                 scannerHome = tool 'stalin-sonar-scanner'
