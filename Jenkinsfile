@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        PATH = "/opt/apache-maven-3.9.15/bin:${env.PATH}"
+        PATH = "/opt/apache-maven-3.9.16/bin:${env.PATH}"
     }
 
     stages {
