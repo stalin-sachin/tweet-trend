@@ -27,10 +27,10 @@ pipeline {
         }
         stage('SonarQube Analysis') {
             environment {
-                scannerHome = tool 'stalin-sonar-scanner'
+                scannerHome = tool 'devops-sonar-scanner'
             }
             steps {
-                withSonarQubeEnv('stalin-sonarqube-server') {
+                withSonarQubeEnv('devops-sonarqube-server') {
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
